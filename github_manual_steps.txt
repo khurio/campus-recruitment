@@ -19,8 +19,8 @@ GitHub 上传手动步骤指南
    git init
 
 4. 配置 Git 用户信息：
-   git config --global user.name "您的GitHub用户名"
-   git config --global user.email "您的GitHub邮箱"
+   git config --global user.name "khurio"
+   git config --global user.email "736035201@qq.com"
 
 5. 添加所有文件到暂存区：
    git add .
