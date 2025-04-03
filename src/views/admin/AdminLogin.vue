@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
       <div class="flex justify-center">
-        <img class="h-16 w-auto" src="../../assets/images/logo.png" alt="校招直通车" />
+        <h1 class="text-3xl font-bold text-blue-600">校招直通车</h1>
       </div>
       <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
         校招直通车管理系统
