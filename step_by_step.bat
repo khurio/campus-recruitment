@@ -30,14 +30,4 @@ echo.
 echo If you encountered any issues, please refer to the
 echo 'github_upload_instructions.md' file for manual steps.
 echo.
-pause
-
-cd C:\Users\Owner\Desktop\工作文件夹\fun
-git init
-git add .
-git config --global user.name "您的GitHub用户名"
-git config --global user.email "您的GitHub邮箱"
-git commit -m "初始化提交：校招直通车项目"
-git branch -M main
-git remote add origin https://github.com/您的用户名/campus-recruitment.git
-git push -u origin main 
+pause 
