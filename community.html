@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社区 - 宣讲答疑助手</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.31/dist/vue.global.prod.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div id="app" class="min-h-screen">
+        <!-- 头部导航 -->
+        <nav class="bg-blue-600 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+                <a href="/" class="text-xl font-bold">宣讲答疑助手</a>
+                <div class="flex space-x-4">
+                    <a href="/community.html" class="hover:underline font-bold underline">社区首页</a>
+                    <a href="/enterprise.html" class="hover:underline">企业展示</a>
+                    <a href="/profile.html" class="hover:underline">个人信息</a>
+                    <a href="/login.html" class="bg-white text-blue-600 px-3 py-1 rounded-md">登录/注册</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主要内容 -->
+        <main class="container mx-auto px-4 py-6">
+            <div class="flex flex-col lg:flex-row gap-6">
+                <!-- 左侧内容 -->
+                <div class="lg:w-3/4">
+                    <!-- 顶部筛选栏 -->
+                    <div class="bg-white rounded-lg shadow-md p-4 mb-6 flex flex-wrap items-center">
+                        <div class="mr-6 mb-2 md:mb-0">
+                            <span class="font-medium text-gray-800">分类：</span>
+                            <select class="border border-gray-300 rounded-md px-2 py-1 ml-2">
+                                <option>全部</option>
+                                <option>经验分享</option>
+                                <option>求职咨询</option>
+                                <option>内推信息</option>
+                                <option>面试题讨论</option>
+                            </select>
+                        </div>
+                        <div class="mr-6 mb-2 md:mb-0">
+                            <span class="font-medium text-gray-800">排序：</span>
+                            <select class="border border-gray-300 rounded-md px-2 py-1 ml-2">
+                                <option>最新发布</option>
+                                <option>最多评论</option>
+                                <option>最多点赞</option>
+                            </select>
+                        </div>
+                        <div class="flex-grow"></div>
+                        <button class="bg-blue-600 text-white rounded-md px-4 py-2">发布帖子</button>
+                    </div>
+                    
+                    <!-- 帖子列表 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden mb-6">
+                        <!-- 帖子1 -->
+                        <div class="p-6 border-b border-gray-200">
+                            <div class="flex justify-between items-start mb-3">
+                                <div class="flex">
+                                    <div class="w-10 h-10 bg-gray-200 rounded-full mr-3 flex-shrink-0"></div>
+                                    <div>
+                                        <h3 class="font-medium text-lg text-gray-800">腾讯产品经理面试经验分享</h3>
+                                        <div class="flex items-center text-sm text-gray-600">
+                                            <span class="mr-2">用户名</span>
+                                            <span>2023-11-10 14:32</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">经验分享</span>
+                            </div>
+                            <p class="text-gray-800 mb-4">
+                                上周参加了腾讯产品经理的面试，这里分享一下面试过程和一些常见问题。整个面试分为三轮，第一轮主要是自我介绍和项目经验，第二轮是产品设计和用户分析，第三轮是HR面...
+                            </p>
+                            <div class="flex justify-between items-center text-gray-500 text-sm">
+                                <div class="flex space-x-4">
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> 356</span>
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg> 42</span>
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg> 78</span>
+                                </div>
+                                <a href="/post-detail.html?id=1" class="text-blue-600 hover:underline">阅读全文</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 帖子2 -->
+                        <div class="p-6 border-b border-gray-200">
+                            <div class="flex justify-between items-start mb-3">
+                                <div class="flex">
+                                    <div class="w-10 h-10 bg-gray-200 rounded-full mr-3 flex-shrink-0"></div>
+                                    <div>
+                                        <h3 class="font-medium text-lg text-gray-800">拿到阿里和字节的offer，该如何选择？</h3>
+                                        <div class="flex items-center text-sm text-gray-600">
+                                            <span class="mr-2">程序员小李</span>
+                                            <span>2023-11-09 10:15</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">求职咨询</span>
+                            </div>
+                            <p class="text-gray-800 mb-4">
+                                最近收到了阿里和字节的offer，岗位都是后端开发工程师。阿里薪资稍低但团队很稳定，字节薪资高但据说加班比较多。作为应届生，更看重哪个因素比较好？有没有在这两家公司工作过的前辈给点意见？
+                            </p>
+                            <div class="flex justify-between items-center text-gray-500 text-sm">
+                                <div class="flex space-x-4">
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> 482</span>
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg> 65</span>
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg> 103</span>
+                                </div>
+                                <a href="/post-detail.html?id=2" class="text-blue-600 hover:underline">阅读全文</a>
+                            </div>
+                        </div>
+                        
+                        <!-- 帖子3 -->
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <div class="flex">
+                                    <div class="w-10 h-10 bg-gray-200 rounded-full mr-3 flex-shrink-0"></div>
+                                    <div>
+                                        <h3 class="font-medium text-lg text-gray-800">华为研发岗前端面试题分享</h3>
+                                        <div class="flex items-center text-sm text-gray-600">
+                                            <span class="mr-2">前端小王</span>
+                                            <span>2023-11-08 16:40</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">面试题讨论</span>
+                            </div>
+                            <p class="text-gray-800 mb-4">
+                                昨天参加了华为的前端面试，记录一下几道比较有代表性的技术题：
+                                1. 讲一下盒模型和BFC
+                                2. Promise的原理和实现
+                                3. Vue的响应式原理
+                                4. 如何优化前端性能
+                                大家有答案或者思路可以在评论区讨论~
+                            </p>
+                            <div class="flex justify-between items-center text-gray-500 text-sm">
+                                <div class="flex space-x-4">
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg> 275</span>
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg> 38</span>
+                                    <span class="flex items-center"><svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg> 86</span>
+                                </div>
+                                <a href="/post-detail.html?id=3" class="text-blue-600 hover:underline">阅读全文</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 分页 -->
+                    <div class="flex justify-center">
+                        <nav class="flex items-center space-x-2">
+                            <a href="#" class="px-3 py-1 rounded-md border border-gray-300 text-gray-600 hover:bg-gray-50">上一页</a>
+                            <a href="#" class="px-3 py-1 rounded-md bg-blue-600 text-white">1</a>
+                            <a href="#" class="px-3 py-1 rounded-md border border-gray-300 text-gray-600 hover:bg-gray-50">2</a>
+                            <a href="#" class="px-3 py-1 rounded-md border border-gray-300 text-gray-600 hover:bg-gray-50">3</a>
+                            <a href="#" class="px-3 py-1 rounded-md border border-gray-300 text-gray-600 hover:bg-gray-50">下一页</a>
+                        </nav>
+                    </div>
+                </div>
+                
+                <!-- 右侧侧边栏 -->
+                <div class="lg:w-1/4">
+                    <!-- 用户信息卡片 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gray-200 rounded-full mr-3"></div>
+                            <div>
+                                <p class="font-medium text-gray-800">张三</p>
+                                <p class="text-sm text-gray-600">计算机科学与技术专业</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-around text-center text-gray-700 mb-4">
+                            <div>
+                                <p class="font-medium">12</p>
+                                <p class="text-xs text-gray-500">帖子</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">256</p>
+                                <p class="text-xs text-gray-500">获赞</p>
+                            </div>
+                            <div>
+                                <p class="font-medium">48</p>
+                                <p class="text-xs text-gray-500">收藏</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">发布新帖</button>
+                    </div>
+                    
+                    <!-- 热门话题 -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-lg font-medium text-gray-800 mb-4">热门话题</h3>
+                        <div class="space-y-3">
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                                <span class="text-lg mr-2">#</span>
+                                <span>应届生求职</span>
+                                <span class="ml-auto text-sm text-gray-500">1.2k</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                                <span class="text-lg mr-2">#</span>
+                                <span>互联网大厂面经</span>
+                                <span class="ml-auto text-sm text-gray-500">986</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                                <span class="text-lg mr-2">#</span>
+                                <span>前端开发</span>
+                                <span class="ml-auto text-sm text-gray-500">756</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                                <span class="text-lg mr-2">#</span>
+                                <span>简历优化</span>
+                                <span class="ml-auto text-sm text-gray-500">682</span>
+                            </a>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-blue-600">
+                                <span class="text-lg mr-2">#</span>
+                                <span>实习经验</span>
+                                <span class="ml-auto text-sm text-gray-500">521</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 即将举行的宣讲会 -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-medium text-gray-800 mb-4">即将举行的宣讲会</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-600 pl-3">
+                                <p class="font-medium text-gray-800">腾讯科技有限公司</p>
+                                <p class="text-sm text-gray-600">2023-11-15 14:00</p>
+                                <a href="/enterprise-detail.html?id=1" class="text-xs text-blue-600 hover:underline">了解详情</a>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-3">
+                                <p class="font-medium text-gray-800">阿里巴巴集团</p>
+                                <p class="text-sm text-gray-600">2023-11-18 10:00</p>
+                                <a href="/enterprise-detail.html?id=2" class="text-xs text-blue-600 hover:underline">了解详情</a>
+                            </div>
+                            <div class="border-l-4 border-blue-600 pl-3">
+                                <p class="font-medium text-gray-800">华为技术有限公司</p>
+                                <p class="text-sm text-gray-600">2023-11-20 15:30</p>
+                                <a href="/enterprise-detail.html?id=3" class="text-xs text-blue-600 hover:underline">了解详情</a>
+                            </div>
+                        </div>
+                        <a href="/enterprise.html" class="block text-center text-blue-600 hover:underline mt-4">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="bg-gray-800 text-white py-8 mt-12">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <h3 class="text-xl font-bold mb-4">宣讲答疑助手</h3>
+                        <p class="text-gray-400">连接企业与求职者的桥梁</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-lg font-semibold mb-3">功能</h4>
+                            <ul class="space-y-2">
+                                <li><a href="/enterprise.html" class="text-gray-400 hover:text-white">企业展示</a></li>
+                                <li><a href="/matching.html" class="text-gray-400 hover:text-white">职位匹配</a></li>
+                                <li><a href="/resume.html" class="text-gray-400 hover:text-white">简历优化</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold mb-3">关于我们</h4>
+                            <ul class="space-y-2">
+                                <li><a href="/about.html" class="text-gray-400 hover:text-white">关于平台</a></li>
+                                <li><a href="/contact.html" class="text-gray-400 hover:text-white">联系我们</a></li>
+                                <li><a href="/privacy.html" class="text-gray-400 hover:text-white">隐私政策</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                    <p>&copy; 2023 宣讲答疑助手. 保留所有权利.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    // 应用状态数据
+                }
+            },
+            methods: {
+                // 应用方法
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html> 
