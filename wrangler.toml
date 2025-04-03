@@ -1,0 +1,5 @@
+name = "campus-recruitment"
+compatibility_date = "2025-04-03"
+
+[site]
+bucket = "./dist" 

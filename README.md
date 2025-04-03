@@ -44,4 +44,60 @@ npm run preview
 
 ## 许可证
 
-本项目采用 MIT 许可证进行授权。 
+本项目采用 MIT 许可证进行授权。
+
+## 项目介绍
+
+校招直通车是一个连接企业与求职者的平台，旨在提供高效、便捷的校园招聘服务。
+
+## 部署指南
+
+### 本地开发
+```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+```
+
+### 生产环境部署
+
+#### 构建项目
+```bash
+npm run build
+```
+
+#### 部署到Cloudflare Workers
+1. 安装Wrangler CLI
+```bash
+npm install -g wrangler
+```
+
+2. 登录到Cloudflare账号
+```bash
+wrangler login
+```
+
+3. 部署静态资产
+```bash
+wrangler deploy --assets=./dist
+```
+
+或者使用配置文件部署:
+```bash
+# 确保wrangler.toml文件存在后
+wrangler deploy
+```
+
+## 管理后台
+管理后台路径: `/admin/dashboard`
+默认管理员账号: admin
+默认密码: admin123
+
+## 特性
+- 企业宣讲信息展示
+- 在线互动问答
+- 简历投递与管理
+- 企业信息展示
+- 后台管理系统 

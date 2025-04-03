@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "wrangler deploy",
     "serve": "cd server && npm run start",
     "dev:server": "cd server && npm run dev",
     "dev:weapp": "cd taro && npm run dev:weapp",
