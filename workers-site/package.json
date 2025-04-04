@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "campus-recruitment-workers",
+  "version": "1.0.0",
+  "description": "校招直通车Workers脚本",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.0"
+  }
+} 

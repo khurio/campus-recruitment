@@ -1,5 +1,10 @@
 name = "campus-recruitment"
 compatibility_date = "2025-04-03"
+main = "workers-site/index.js"
 
+# 静态网站配置
 [site]
-bucket = "./dist" 
+bucket = "./dist"
+
+# 指定类型为网站
+type = "webpack" 
